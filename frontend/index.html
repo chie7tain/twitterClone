@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" width="device-width,initial-scale=1.0,maximum-scale=1.0">
         <title>Twitter Clone</title>
+        <script src="https://kit.fontawesome.com/52f2afaff9.js" crossorigin="anonymous"></script>
         <style>
             /* reset default browser styles */
             *{
@@ -11,10 +12,16 @@
                 padding:0;
                 box-sizing: border-box;
             }
+            .twitter-logo{
+                    width:45px;
+                    color:#1da1f2;
+                }
+            .icons{
+                width:35px;
+                
+            }
             .main-container{
                 border:1px solid red;
-                
-
             }
             .social-container{
                 border:1px solid black;
@@ -24,43 +31,153 @@
                 border:1px solid forestgreen;
                 background-color:#fff;
             }
+            /* mobile first design styles */
+            /* --------------------------------------------------------------------------------------------- */
+            @media only screen and (max-width: 400px){
+                body{
+                    background-color:firebrick;
+                }
+                .logo-login-btn-container{
+                    /* border:1px solid black; */
+                    width:100%;
+                }
+                
+                .first-login-btn{
+                    background-color:#fff;
+                    border:1px solid #1da1f2;
+                    color:#1da1f2;
+                    padding:13px;
+                    border-radius:100px;
+                    font-weight:bold;
+                    cursor:pointer;
+                    font-size:12px;
+                    line-height:16px;
+                    float:right;
+                    margin:3px;
+                    display: block;
+                }
+                .welcome-text-container{
+                    width:100%;
+                    /* margin-bottom:35px; */
+                }
+                .welcome-text{
+                    font-size:27px;
+                    line-height:32px;
+                    font-family:"Segoe UI",Arial,sans-serif;
+                    color:#14171a;
+                    margin-bottom:40px;
+                    
+                }
+                .join-twitter-text{
+                    color:#14171a;
+                    font-size:18px;
+                    line-height:24px;
+                    margin:16px auto;
+                    font-family:"Segoe UI",Arial,sans-serif;
+                }
+                
+                .sign-up-btn{
+                    padding:7px;
+                    border:none;
+                    border-radius:100px;
+                    font-weight: bold;
+                    width:100%;
+                    margin:15px auto;
+                    font-family:"Segoe UI",Arial,sans-serif;
+                    color:#fff;
+                    background-color:#1da1f2;
+                    cursor:pointer;
+                    text-decoration:none;
+                    display:block;
+                    text-align:center;
+                    font-size:14px;
+                    line-height: 20px;
+                }
+                .log-in-btn{
+                    padding:7px;
+                    border:1px solid #1da1f2;
+                    border-radius:100px;
+                    font-size:14px;
+                    font-weight: bold;
+                    width:100%;
+                    margin:15px auto;
+                    font-family:"Segoe UI",Arial,sans-serif;
+                    color:#1da1f2;
+                    background-color:#fff;
+                    cursor:pointer;
+                    text-decoration:none;
+                    display:block;
+                    text-align:center;
+                    line-height:20px;
+
+                }
+            }
+            
+            /* -------------------------------------------------------------------------------------------- */
+            /* end of mobile design */
+
+
+             /* tablet design */
+            /* ---------------------------------------------------------------------------------------------- */
+            @media only screen and (min-width:401px) and (max-width:960px){
+                body{
+                    background-color:gold;
+                }
+            }
+
+            /* ---------------------------------------------------------------------------------------------- */
+            /* end of tablet design */
+
+
+            /* desktop design */
+            /* ----------------------------------------------------------------------------------------------- */
+            @media only screen and (min-width:961px){
+                body{
+                    background-color:indigo;
+                }
+            }
+            /* ----------------------------------------------------------------------------------------------- */
+            /* end of desktop design */
         </style>
     </head>
     <body>
         <header></header>
         <main class="main-container">
-            <!-- This contain's the html code for social links container -->
-            <div class="social-container">
-                <ul>
-                    <li>Follow your interests.</li>
-                    <li>Hear what people are talking about.</li>
-                    <li>Join the conversation</li>
-                </ul>
-            </div>
             <!-- This contain's the html for the sign up / login form-->
             <div class="signup-login-form-container">
+                <div class="logo-login-btn-container">
+                    <!-- Attribution for author of logo -->
+                        <!-- <div>twitter icon made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div> -->
+                    <span class="twitter-logo"><img class="twitter-logo" src="../assets/svg/001-twitter.svg" alt="twitter logo"></span>
 
-                <span class="twitter-logo">This is a logo</span>
+                    <a class="first-login-btn">Log in</a>
+                </div>
+                    
+    
+                    <div class="welcome-text-container">
+                        <h1 class="welcome-text">See what's happening in the world right now</h1>
+                    </div>
+                    
+                    <div class="join-twitter-today">
+                        <h2 class="join-twitter-text">Join Twitter today.</h2>
+                    </div>
+                    <div class="form-container">
+                                <a href="" class="sign-up-btn">Sign up</a>
 
-                <span class="first-login-btn-container">
-                    <button class="first-login-btn">Log in</button>
-                </span>
-
-                <div class="welcome-text-container">
-                    <h3>See what's happening in the world right now</h3>
+                                <a href="" class="log-in-btn">Log in</a>
+                    </div>
+                    
                 </div>
-                
-                <div class="join-twitter-today">
-                    <h4>Join Twitter today.</h4>
-                </div>
-                <div class="form-conatainer">
-                    <form>
-                        <button class="Sign-up-btn">Sign up</button>
-                        <button class="Log-in-btn">Log in</button>
-                    </form>
-                </div>
-                
+            <!-- This contain's the html code for social links container -->
+            <div class="social-container">
+                    
+                <ul>
+                    <li><span><i class="fas fa-search"></i><img class="icons" src="../assets/icons/svg/001-search.svg"></span>Follow your interests.</li>
+                    <li><span><img class="icons" src="../assets/icons/svg/002-multiple-users-silhouette.svg"></span>Hear what people are talking about.</li>
+                    <li><span><img class="icons" src="../assets/icons/svg/003-comment-white-oval-bubble.svg"></span>Join the conversation</li>
+                </ul>
             </div>
+            
         </main>
         <footer></footer>
     </body>
