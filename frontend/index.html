@@ -12,20 +12,55 @@
                 padding:0;
                 box-sizing: border-box;
             }
+
+            /* -------------------------------- */
+            /* this styles concern logo and icons */
             .twitter-logo{
                     width:45px;
                     color:#1da1f2;
                 }
+                .first-user{
+                    position:absolute;
+                    left:13px;
+                    top:26px;
+                    z-index: 1;
+                }
+                i{
+                    color:#fff;
+                    /* border:1px solid red; */
+                }
             .icons{
-                width:35px;
-                
+                margin-right:20px;
+                /* border:1px solid red; */
             }
+
+            .social{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 24px;
+                color:#fff;
+                font-family: "Segoe UI",Arial,sans-serif;
+                margin:10px;
+            }
+
+            .fa-user-friends{
+                background-color:transparent;
+            }
+            .img{
+                color:white;
+            }
+            /* end of logo and icon */
+            /* ---------------------------------- */
+
+
             .main-container{
-                border:1px solid red;
+                border:none;
             }
             .social-container{
-                border:1px solid black;
+                border:none;
                 background-color:#1b95e0;
+                position: relative;
+                width:100%;
             }
             .signup-login-form-container{
                 border:1px solid forestgreen;
@@ -34,14 +69,12 @@
             /* mobile first design styles */
             /* --------------------------------------------------------------------------------------------- */
             @media only screen and (max-width: 400px){
-                body{
-                    background-color:firebrick;
-                }
+                
                 .logo-login-btn-container{
                     /* border:1px solid black; */
                     width:100%;
                 }
-                
+
                 .first-login-btn{
                     background-color:#fff;
                     border:1px solid #1da1f2;
@@ -55,6 +88,7 @@
                     float:right;
                     margin:3px;
                     display: block;
+                    font-family: "Segoe UI",Arial san-serif;
                 }
                 .welcome-text-container{
                     width:100%;
@@ -66,7 +100,7 @@
                     font-family:"Segoe UI",Arial,sans-serif;
                     color:#14171a;
                     margin-bottom:40px;
-                    
+
                 }
                 .join-twitter-text{
                     color:#14171a;
@@ -75,7 +109,7 @@
                     margin:16px auto;
                     font-family:"Segoe UI",Arial,sans-serif;
                 }
-                
+
                 .sign-up-btn{
                     padding:7px;
                     border:none;
@@ -112,7 +146,21 @@
 
                 }
             }
-            
+
+            /*styles for social container  */
+            .social-container{
+                display:flex;
+                flex-direction:column;
+                justify-content: space-evenly;
+            }
+            .social-item{
+                float:left;
+                clear:right;
+                display: flex;
+                height: 75px;
+
+            }
+            /* ======================================= */
             /* -------------------------------------------------------------------------------------------- */
             /* end of mobile design */
 
@@ -152,12 +200,12 @@
 
                     <a class="first-login-btn">Log in</a>
                 </div>
-                    
-    
+
+
                     <div class="welcome-text-container">
                         <h1 class="welcome-text">See what's happening in the world right now</h1>
                     </div>
-                    
+
                     <div class="join-twitter-today">
                         <h2 class="join-twitter-text">Join Twitter today.</h2>
                     </div>
@@ -166,18 +214,37 @@
 
                                 <a href="" class="log-in-btn">Log in</a>
                     </div>
-                    
+
                 </div>
             <!-- This contain's the html code for social links container -->
             <div class="social-container">
-                    
-                <ul>
-                    <li><span><i class="fas fa-search"></i><img class="icons" src="../assets/icons/svg/001-search.svg"></span>Follow your interests.</li>
-                    <li><span><img class="icons" src="../assets/icons/svg/002-multiple-users-silhouette.svg"></span>Hear what people are talking about.</li>
-                    <li><span><img class="icons" src="../assets/icons/svg/003-comment-white-oval-bubble.svg"></span>Join the conversation</li>
-                </ul>
+                <div class="social">
+                    <div class="social-item">
+                        <span class="icons">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <span>Follow your interests.</span>
+                    </div>
+                </div>
+                <div class="social">
+                    <div class="social-item">
+                        <span class="icons">
+                            <i class="far fa-user"></i>
+                        </span>
+                        <span>what people are talking about.</span>
+                    </div>
+
+                </div>
+                <div class="social">
+                    <div class="social-item">
+                        <span class="icons">
+                            <i class="far fa-comment"></i>
+                        </span>
+                    </div>
+                    <span>Join the conversation</span>
+                </div>
             </div>
-            
+
         </main>
         <footer></footer>
     </body>
